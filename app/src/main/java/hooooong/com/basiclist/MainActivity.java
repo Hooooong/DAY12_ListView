@@ -9,10 +9,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    // ListView 정의
+    // 1. ListView 정의
     ListView listView;
 
-    // 1. 데이터를 정의
+    // 2. 데이터를 정의
     List<String> data = new ArrayList<>();
 
     @Override
@@ -21,15 +21,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
 
-        // 1-1. 데이터를 임의로 넣는다
+        // 2-1. 데이터를 임의로 넣는다
         for(int i = 0 ; i<100; i++){
             data.add("임시값 : " +i);
         }
 
-        // 2. 데이터와 ListView 를 연결하는 Adapter 를 생성
+        // 3. 데이터와 ListView 를 연결하는 Adapter 를 생성
         // BaseAdapter 를 상속받아야 한다.
         CustomAdapter customAdapter = new CustomAdapter(getBaseContext(), data);
-        // 3. Adapter 와 ListView 를 연결
+        // 4. Adapter 와 ListView 를 연결
         listView.setAdapter(customAdapter);
     }
 
