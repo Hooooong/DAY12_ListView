@@ -12,13 +12,15 @@ ____________________________________________________
 
       - ListView 란?
 
-          ![ListView 이미지]()
+          ![ListView 이미지](https://github.com/Hooooong/DAY12_ListView/blob/master/image/ListView%20sample.png)
 
           > ListView는 사용자가 정의한 데이터 목록을 아이템 단위로 구성하여 화면에 출력하는 ViewGroup의 한 종류이다.
           ListView의 아이템들은 세로 방향으로 나열되며, 아이템의 개수가 많아짐에 따라 ListView에 표시될 내용이
           ListView의 크기(width, height)를 넘어서게 되면 스크롤 기능을 사용해 ListView의 표시 기준 위치를 이동시킬 있다.
 
       - ListView 구조
+
+          ![ListView Adapter 이미지](https://github.com/Hooooong/DAY12_ListView/blob/master/image/ListView.PNG)
 
           - [Spinner](https://github.com/Hooooong/DAY10_Widget) 구조와 동일하게 Adapter를 사용한다.
 
