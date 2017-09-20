@@ -16,7 +16,7 @@ ____________________________________________________
 
           > ListView는 사용자가 정의한 데이터 목록을 아이템 단위로 구성하여 화면에 출력하는 ViewGroup의 한 종류이다.
           ListView의 아이템들은 세로 방향으로 나열되며, 아이템의 개수가 많아짐에 따라 ListView에 표시될 내용이
-          ListView의 크기(width, height)를 넘어서게 되면 스크롤 기능을 사용해 ListView의 표시 기준 위치를 이동시킬 있다.
+          ListView의 크기를 넘어서게 되면 스크롤 기능을 사용해 ListView의 표시 기준 위치를 이동시킬 있다.
 
       - ListView 구조
 
@@ -27,14 +27,6 @@ ____________________________________________________
       - ListView 사용 및 작성법
 
           - ListView 사용 및 작성법
-
-              1. ListView 를 정의
-
-              2. 데이터를 정의
-
-              3. 데이터와 ListView를 연결하는 Adapter 생성
-
-              4. Adapter 와 ListView 를 연결
 
               ```java
               // 1. ListView 정의
