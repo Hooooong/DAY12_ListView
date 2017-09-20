@@ -17,8 +17,8 @@ import java.util.List;
 class CustomAdapter extends BaseAdapter {
     // 데이터 저장소를 Adapter 내부에 저장하는것이 관리하기 편하다.
 
-    Context context;
-    List<String> data;
+    private Context context;
+    private List<String> data;
 
     CustomAdapter(Context context, List<String> data) {
         this.context = context;
@@ -61,12 +61,15 @@ class CustomAdapter extends BaseAdapter {
         // 생성자를 통해 넘겨받은 context 를 사용한다.
 
         // Holder 변수 생성
-        Holder holder = null;
+        Holder holder;
 
         // Item View 를 재사용하기 위해 Null Check 를 한다.
         if (convertView == null) {
 
-            convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.list_item, null);
+            // OR
+            //convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, null);
+
             //View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
 
             // View 안에 있는 텍스트뷰 위젯에 값을 입력한다.
@@ -91,7 +94,7 @@ class CustomAdapter extends BaseAdapter {
         return convertView;
     }
 
-    class Holder {
+    private class Holder {
         TextView textView;
 
         Holder(View view) {
@@ -101,7 +104,7 @@ class CustomAdapter extends BaseAdapter {
 
         // 화면에 보여지는 View 는
         // 기본적으로 자신이 속한 Component 의 Context 를 그대로 가지고 잇다.
-        public void setOnClickListener(){
+        void setOnClickListener(){
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
