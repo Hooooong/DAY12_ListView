@@ -75,9 +75,6 @@ ____________________________________________________
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // Holder 변수 생성
-        Holder holder = null;
-
         // Item View 를 재사용하기 위해 Null Check 를 한다.
         if (convertView == null) {
             // View 가 없으면 새로 생성
